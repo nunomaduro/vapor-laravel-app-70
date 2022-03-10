@@ -1,0 +1,10 @@
+id: 59
+name: vapor-laravel-app-70
+environments:
+    production:
+        memory: 1024
+        cli-memory: 512
+        runtime: 'php-8.1:al2'
+        build:
+            - 'COMPOSER_MIRROR_PATH_REPOS=1 composer install --no-dev'
+            - 'php artisan event:cache'
